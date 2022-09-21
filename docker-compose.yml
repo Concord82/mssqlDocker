@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  mssql:
+    container_name: sql-server2017-db
+    image: mssql2017
+    ports:
+      - 1433:1433
+    volumes:
+      - ./data/:/var/opt/mssql/data/
+      - ./log/:/var/opt/mssql/log/
+    environment:
+      - USER_PASS=FnnR#puqZBiUV2%SnwU#w415HZpYw4u
