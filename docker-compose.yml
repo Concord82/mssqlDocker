@@ -9,5 +9,5 @@ services:
     volumes:
       - ./data/:/var/opt/mssql/data/
       - ./log/:/var/opt/mssql/log/
-    environment:
-      - USER_PASS=FnnR#puqZBiUV2%SnwU#w415HZpYw4u
+    env_file:
+      - .env
