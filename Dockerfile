@@ -14,9 +14,10 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 COPY create-database.sql create-database.sql
-COPY --chmod=555  run-initialization.sh run-initialization.sh
-COPY --chmod=555  entrypoint.sh entrypoint.sh
+COPY run-initialization.sh run-initialization.sh
+COPY entrypoint.sh entrypoint.sh
 
-#RUN chmod +x run-initialization.sh
+RUN chmod +x run-initialization.sh
+RUN chmod +x entrypoint.sh
 
 CMD /bin/bash ./entrypoint.sh
